@@ -68,9 +68,17 @@ button:hover {
     align-items: center;
 }
 
-#task-list button {
-    background-color: #d9534f;
+#task-list li span {
+    flex-grow: 1; /* 讓任務描述占據大部分空間，從而推動按鈕到右側 */
+    overflow: hidden; /* 防止文字過多時溢出 */
+    white-space: nowrap; /* 禁止文字換行 */
+    text-overflow: ellipsis; /* 超出部分顯示省略符號 */
 }
+
+#task-list li button {
+    margin-left: 10px; /* 在按鈕之間添加一些間隔 */
+}
+
 
 #task-list button:hover {
     background-color: #c9302c;
